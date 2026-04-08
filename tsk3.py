@@ -9,25 +9,25 @@ class NotSleeping:
         count_sheeps (int): The number of sheep counted.
     """
     
-    def __init__(self, name, count_sheeps=0):
+    def __init__(self, name, count_sheeps=0) -> None:
         """Initialize a new NotSleeping object."""
         self.name = name
         self.count_sheeps = count_sheeps
     
-    def add_sheep(self):
+    def add_sheep(self) -> None:
         """Add one sheep to the count."""
         self.count_sheeps += 1
     
-    def lost(self):
+    def lost(self) -> None:
         """Reset the sheep counter."""
         self.count_sheeps = 0
     
-    def get_count_sheeps(self):
+    def get_count_sheeps(self) -> int:
         """Return the current number of counted sheep."""
         return self.count_sheeps
 
 
-def main():
+def main() -> None:
     """The main function of the program."""
     human = NotSleeping('Мистер Смит')
     
