@@ -7,17 +7,17 @@ class NotSleeping:
         count_sheeps (int): The number of sheep counted.
     """
     
-    def __init__(self, name, count_sheeps=0):
+    def __init__(self, name, count_sheeps = 0) -> None:
         """Initialize a new NotSleeping object."""
         self.name = name
         self.count_sheeps = count_sheeps
     
-    def add_sheep(self):
+    def add_sheep(self) -> None:
         """Add one sheep to the count."""
         self.count_sheeps += 1
 
 
-def main():
+def main() -> None:
     """
     Main function to demonstrate the NotSleeping class functionality.
     """
