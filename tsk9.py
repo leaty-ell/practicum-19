@@ -1,3 +1,5 @@
+from typing import List
+
 class StrandsDNA:
     """
     A class representing DNA strands.
@@ -6,11 +8,11 @@ class StrandsDNA:
         all_strands (list): List containing all DNA strands.
     """
     
-    def __init__(self):
+    def __init__(self) -> None:
         """Initialize a new StrandsDNA object."""
         self.all_strands = []
     
-    def add_strands(self, strands):
+    def add_strands(self, strands) -> None:
         """
         Add DNA strands to the collection.
         
@@ -22,7 +24,7 @@ class StrandsDNA:
         for strand in new_strands:
             self.all_strands.append(strand)
     
-    def get_max_strands(self):
+    def get_max_strands(self) -> str:
         """
         Get the longest unique DNA strands in alphabetical order.
         
@@ -47,7 +49,7 @@ class StrandsDNA:
         
         return result
     
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Return a string representation of all DNA strands.
         
@@ -57,7 +59,7 @@ class StrandsDNA:
         return ' '.join(self.all_strands)
   
 
-def main():
+def main() -> None:
     """The main function of the program."""
     covid_19 = StrandsDNA()
     
