@@ -1,3 +1,5 @@
+from typing import List, Dict, Set
+
 class MorseMsg:
     """
     A class representing a message in Morse code.
@@ -41,12 +43,12 @@ class MorseMsg:
                      'Н', 'П', 'Р', 'С', 'Т', 'Ф', 'Х', 'Ц', 'Ч', 'Ш',
                      'Щ', 'Ъ', 'Ь'}
     
-    def __init__(self, morse_string):
+    def __init__(self, morse_string) -> None:
         """Initialize a new MorseMsg object."""
         self.morse_string = morse_string
         self.morse_letters = morse_string.split()
     
-    def eng_decode(self):
+    def eng_decode(self) -> str:
         """
         Decode the Morse code message to English letters.
   
@@ -60,7 +62,7 @@ class MorseMsg:
         
         return result
     
-    def ru_decode(self):
+    def ru_decode(self) -> str:
         """
         Decode the Morse code message to Russian letters.
 
@@ -75,7 +77,7 @@ class MorseMsg:
         
         return result
     
-    def get_vowels(self, lang):
+    def get_vowels(self, lang) -> List[str]:
         """
         Extract vowels from the decoded message.
        
@@ -97,7 +99,7 @@ class MorseMsg:
         
         return vowels
     
-    def get_consonants(self, lang):
+    def get_consonants(self, lang) -> List[str]:
         """
         Extract consonants from the decoded message.
    
@@ -122,7 +124,7 @@ class MorseMsg:
         
         return consonants
     
-    def __str__(self):
+    def __str__(self) -> str:
         """
         Return the decoded English message as string representation.
     
@@ -132,7 +134,7 @@ class MorseMsg:
         return self.eng_decode()
 
 
-def main():
+def main() -> None:
     """The main function of the program."""
     msgs = []
     
