@@ -11,7 +11,7 @@ class User:
         gender (str): User's gender (optional).
     """
     
-    def __init__(self, id, nick_name, first_name, last_name='', middle_name='', gender=''):
+    def __init__(self, id, nick_name, first_name, last_name='', middle_name='', gender='') -> None:
         """Initialize a new User object."""
         self.id = id
         self.nick_name = nick_name
@@ -20,7 +20,7 @@ class User:
         self.middle_name = middle_name
         self.gender = gender
     
-    def update(self, id=None, nick_name=None, first_name=None, last_name=None, middle_name=None, gender=None):
+    def update(self, id=None, nick_name=None, first_name=None, last_name=None, middle_name=None, gender=None) -> None:
         """Update user attributes."""
         if id is not None:
             self.id = id
@@ -35,7 +35,7 @@ class User:
         if gender is not None:
             self.gender = gender
     
-    def __str__(self):
+    def __str__(self) -> str:
         """Return a string representation of the User object."""
         name_parts = []
         
@@ -56,7 +56,7 @@ class User:
         
         return result
     
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Return a string representation for debugging and collections."""
         return self.nick_name
 
